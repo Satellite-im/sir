@@ -1,0 +1,35 @@
+[package]
+name = "sir"
+version = "0.2.2"
+edition = "2021"
+
+description = "Write SCSS in your component functions"
+readme = "Readme.md"
+keywords = ["css", "scss", "style", "dioxus"]
+categories = ["gui", "web-programming"]
+
+authors = ["Reinis Mazeiks"]
+license = "MIT OR Apache-2.0"
+
+repository = "https://gitlab.com/dawn_best/sir"
+documentation = "https://docs.rs/sir/latest/sir/"
+
+[dependencies]
+dioxus = { git = "https://github.com/DioxusLabs/dioxus", branch = "master", optional=true }
+once_cell = "1.10.0"
+
+sir-macro = { version = "0.2.0", path = "../sir-macro" }
+
+[dev-dependencies]
+dioxus = { git = "https://github.com/DioxusLabs/dioxus", branch = "master" }
+dioxus-desktop = { git = "https://github.com/DioxusLabs/dioxus", branch = "master" }
+# this looks wrong but i couldn't figure out how else to enable the dioxus feature for examples
+# remove this and the example breaks.
+sir = { path = ".", features = ["dioxus"] }
+
+[[example]]
+name = "dioxus_counter"
+path = "examples/dioxus_counter.rs"
+
+[package.metadata.docs.rs]
+features = ["dioxus"]

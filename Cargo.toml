@@ -1,0 +1,11 @@
+[workspace]
+
+members = [
+    "sir",
+    "sir-macro",
+]
+
+[patch.crates-io]
+# not released yet
+dioxus = { git = "https://github.com/DioxusLabs/dioxus", branch = "master" }
+dioxus-desktop = { git = "https://github.com/DioxusLabs/dioxus", branch = "master" }

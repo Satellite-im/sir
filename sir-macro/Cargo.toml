@@ -1,0 +1,17 @@
+[package]
+name = "sir-macro"
+version = "0.2.0"
+edition = "2021"
+description = "Helper crate for `sir`. Do not use directly."
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+rsass = "0.24.0"
+rand = "0.8.5"
+
+proc-macro2 = "1.0.36"
+litrs = "0.2.3"
+quote = "1.0.17"
+
+[lib]
+proc-macro = true
